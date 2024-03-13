@@ -172,6 +172,8 @@ textarea {
   }
 }
 
+
+/* ------------------ Header ------------------ */
 header {
   padding: 1em;
   text-align: center;
@@ -183,11 +185,17 @@ header {
 
   position: sticky;
   top: 0px;
+  z-index: 1;
 
   border-bottom: 5px solid var(--bordeaux-fonce);
   /*
   border-bottom-left-radius: 60% 400%;
   border-bottom-right-radius: 60% 400%;*/
+}
+
+header img {
+  width: 150px;
+  height: 150px;
 }
 
 nav ul li {
@@ -212,30 +220,8 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--bleu-clair);
 }
-header img {
-  width: 150px;
-  height: 150px;
-}
 
-footer {
-  background-color: var(--bleu-fonce);
-  padding: 1em;
-  text-align: center;
-  color: var(--blanche);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-    position: sticky;
-    bottom: 0px;
-}
-article {
-  padding: 1em;
-  margin: 1em;
-  background-color: var(--bleu-clair);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px var(--bleu-fonce);
-}
+/* ------------------ Main ------------------ */
 main {
   display: flex;
   align-items: center;
@@ -243,25 +229,40 @@ main {
   justify-content: space-between;
 }
 section {
-  width: 30%;
+  width: 26%;
   margin: 1em;
   padding: 1em;
   background-color: var(--bleu-fonce);
   color: var(--blanche);
   border-radius: 10px;
-  box-shadow: 5px 5px 5px var(--bleu-clair);
+  box-shadow: 5px 5px 5px var(--bleu-mat);
 }
+
 .articleBlock {
   width: 100%;
   margin: 1em;
 }
+
+article {
+  padding: 1em;
+  margin: 1em;
+  width: 26%;
+  background: linear-gradient(145deg, #7AFFFF, #54B7BD);
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px var(--bleu-mat);
+}
+#ac_imgMain {
+  width: 26%;
+}
+/* ------------------ Model Viewer ------------------ */
 
 model-viewer {
   width: 70vw;
   height: 70vh;
 }
 
-button {
+/* ------------------ Bouton du bandeau ------------------ */
+.bandeauBtn {
   padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 8px;
@@ -277,7 +278,7 @@ button {
   user-select: none;
 }
 
-#btn:hover,
+.bandeauBtn:hover,
 :focus {
   color: #ffffff;
   background: var(--rose);
@@ -288,42 +289,16 @@ button {
 }
 
 
-.button {
-  position: relative;
-  overflow: hidden;
-  height: 3rem;
-  padding: 0 2rem;
-  border-radius: 1.5rem;
-  background: #3d3a4e;
-  background-size: 400%;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
+/* ------------------ Footer ------------------ */
+footer {
+  background-color: var(--bleu-fonce);
+  padding: 1em;
+  text-align: center;
+  color: var(--blanche);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-.button-content {
-  position: relative;
-  z-index: 1;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: linear-gradient(
-          82.3deg,
-          rgba(150, 93, 233, 1) 10.8%,
-          rgba(99, 88, 238, 1) 94.3%
-  );
-  transition: all 0.475s;
+  position: sticky;
+  bottom: 0px;
 }
