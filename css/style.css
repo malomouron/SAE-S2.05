@@ -258,6 +258,8 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 6vh;
+  width: 96%;
+  margin: auto;
 }
 section {
   margin: 1em;
@@ -338,16 +340,15 @@ model-viewer {
 /* ------------------ article liste ------------------ */
 
 .quality {
-  width: 100%;
   margin-inline: auto;
-
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
-
   list-style: none;
   counter-reset: cardnr;
-  justify-content: center;
+  width: 90%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .qualityItem {
